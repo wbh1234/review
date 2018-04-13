@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .aa{
+            background: #ff0000;
+        }
+        .bb{
+            background:green;
+        }
+        #div2{
+            width:200px;
+            height:200px;
+            background: blue;
+            padding-top: 50px;
+            box-sizing:border-box;
+        }
+    </style>
+</head>
+<body>
+<!--
+css选择器：
+1：id选择器 #id{}
+2：class选择器 .class{}
+3: 标签选择器 div{} h1{}
+4：后代选择器 #div1 p{}  所有后代
+5：子代选择器 #div > p{}  亲儿子，有兼容性问题
+6：多类选择器 #div.aa{}
+7：分组选择器 div,h1{}
+8：伪类选择器 a:hover{}   鼠标移动到链接上
+              a:link{}      未访问链接
+              a:visited{}   已访问链接
+              a:active{}    选定的链接
+9：伪对象：::after{content:"行级元素"} :;before{}
+10：属性选择器：a[target]  如：input[name=username]{}
+11：兄弟选择器：+(相邻的) ~(后面所有的)
+12：css选择器：
+-->
+<div class="aa bb">div</div>//跟引用顺序无关，跟定义顺序有关
+<!--
+盒模型：(两种：标准(box-sizing:content-box) 怪异(box-sizing:border-size)/CSS3属性/)
+标准盒模型的宽度等于内容的with+margin(左右)+padding(左右)+border(左右)
+怪异盒模型的宽度等于内容的with+margin(左右)/with包含padding和border/
+-->
+<!--
+定位：position: static(默认) relative(相对的) absolute(绝对的) fixed(固定的，有兼容性问题)
+相对定位：相对于自己的出始位置，不脱离文档流
+绝对定位：相对于自己最近的已经定位的祖先元素，如果没有相对于body，脱离文档流
+var iscrollTop = document.body.scrollTop || document.documentElement.scrollTop
+/获取滚动条高度/
+
+浮动 float：left/right 脱离文档流
+清除浮动 clear:both
+
+display:none;空间释放，无事件
+opacity;0；空间不释放，有事件
+visibility:hidden;空间不释放，无事件/可见的/
+
+-->
+<div id="div2">div2</div>
+
+
+</body>
+</html>

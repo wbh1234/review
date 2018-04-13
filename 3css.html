@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        /*#div1{*/
+            /*width: 200px;*/
+            /*height: 400px;*/
+            /*background:red;*/
+            /*float: left;*/
+            /*!*opacity: .5;//标准浏览器*!*/
+            /*!*filter:alpha(opacity=50);//IE浏览器*!*/
+        /*}*/
+        /*#div1{*/
+            /*width: 200px;*/
+            /*height:400px;*/
+            /*background: red;*/
+            /*position: absolute;*/
+            /*left: 0px;*/
+        /*}*/
+        /*#div2{*/
+            /*width:100%;*/
+            /*height:400px;*/
+            /*background: green;*/
+        /*}*/
+        #div1{
+            width: 200px;
+            height:400px;
+            background: red;
+        }
+        #div2{
+            width:100%;
+            height:400px;
+            background: green;
+            -webkit-webkit-box-flex: 1;
+            -moz-webkit-box-flex: 1;
+            -ms-webkit-box-flex: 1;
+            -o-webkit-box-flex: 1;
+            webkit-box-flex: 1;
+        }
+        #div3{
+            display: -webkit-box;
+        }
+    </style>
+</head>
+<body>
+<!--两列布局，左侧固定，右侧自适应-->
+<!--
+1：浮动
+2：定位
+3：弹性盒模型
+-->
+<!--<div id="div1"></div>-->
+<!--<div id="div2"></div>-->
+<div id="div3">
+    <div id="div1"></div>
+    <div id="div2"></div>
+</div>
+
+</body>
+</html>

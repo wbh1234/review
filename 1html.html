@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            //强制：过于暴力
+        }
+        /*css reset
+        reset重置
+        normalize.css文件
+        */
+    </style>
+</head>
+<body>
+!DOCTYPE://如果没有会出现混杂模式
+html://是根标签
+head：//里面大多给浏览器和搜索引擎看的
+title：//给自己看的
+meta charset="UTF-8"//字符集
+//<meta name="keywords" content="裤子，牛仔裤" >关键字
+//<meta name="descript">
+
+//常见标签
+<h1></h1>
+<h6></h6>//标题，字体从大变小
+<p>自带边距，16px</p>
+<img src="" alt="图片加载失败" title="这是一张图片">
+<span></span>
+<table>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+</table>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+<form action="user/Login" onsubmit="return false">
+    <label for="username">用户名</label>
+    <input type="text" id="username"> <br>
+    <label>用户名：<input type="text" id="username1" name="username"></label>
+    <!--获取焦点,(for id)  name="username"/前后端接口-->
+    <label>密码：<input type="password"> </label>
+    学校: <select>
+    <option value="">琳达</option>
+    <option value="">黑大</option>
+    <option value="">啦啦啦</option>
+
+    <!--<input type="submit">-->
+    <!--<input type="reset">-->
+</select>
+    <button type="button">提交</button>
+    <!--表单提交会触发onsubmit事件，return false-->
+</form>
+//行级元素：span a img input textarea button
+//块级元素：p div h1~h6 ul ol li
+//区别：行级元素在一行，不能设置宽和高；因为是内容撑开的
+//块级元素自己占一行，不设置宽和高的情况下，充满整个父元素，高度是内容的高度
+<!--转化-->
+1.display：block inline inline-block none box table table-cell
+2.浮动
+3.绝对定位
+//语义化标签：作用：便于搜索引擎优化，易于维护
+//文档类型：
+
+</body>
+</html>
