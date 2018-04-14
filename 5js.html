@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height:1200px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li id="div1">1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<script>
+    <!--为什么script写在这里而不是body里,因为程序执行是按照先后顺序的,如果代码过于繁琐影响加载,但是可以用window.onload(他的代码最后执行)-->
+
+//    变量基本类型: number string boolean undefined null
+//    怎么判断一个东西是什么类型，用typeof(返回字符串，里面的值是number什么的)
+//    什么情况下返回undefined 或null(undefined 和 null 值相等，类型不相等)
+//定义方法
+    function aa(){
+        alert(123);
+    }//声明
+    aa();
+    bb();
+    function bb(){
+        alert(123);
+    }
+//    可以先定义后调用，也可以先调用后定义
+    var cc  = function(){
+        alert(555);
+    }
+    cc();
+//    函数表达式必须先定义后调用
+//    js命名规则：1第一个字符必须是字母，下划线，美元符号；2：余下的字符可以是下划线，美元符号或任何字母或数字字符
+
+//    BOM
+    // history对象的方法
+//    back()加载history列表中的前一个url
+//    forward()加载history列表中的下一个url
+//    go()加载history列表中的某个具体页面
+//location对象
+//    location.hash 设置或返回从井号(#)开始的URL(锚)
+//    location.href 设置或返回完整的URL
+//    location.port 设置或返回当前的URL的端口号
+//    location.host 设置或返回主机名和当前URL端口号
+//    Navigator对象
+//    navigator.userAgent 判断什么浏览器，浏览器信息
+//    浏览器的区分是通过内核区分的
+//      Internet Explorer(Trident)
+//    Mozilla Firefox(Gecko)
+//    Google Chrome(KHTML)
+//    Opera(Presto)
+//    Safari(KHTML)
+
+    document.getElementById("id");//获取一个元素
+    document.getElementsByTagName("div");//获取一堆元素
+    document.getElementsByClassName("aa");//具有兼容性问题
+    document.getElementsByName("username");//有兼容性问题
+    //H5，有兼容性问题
+    document.querySelector("#id");//获取一个元素
+    document.querySelectorAll(".aa");//获取一堆元素
+
+//常用的节点属性
+//    nodeType   节点类型 元素节点是1，文本节点是3（节点：有兼容性问题，有的会取到中间空白，空白属于文本节点）
+//    nodeValue  节点值 元素节点为空
+//    firstChild  该元素节点包含的第一个子节点
+//    lastChild   该元素节点包含的最后一个子节点
+
+
+ var oDiv = document.createElement("div");//创建一个div
+    oDiv.innerHTML = "5555";//在div中添加内容
+    document.body.appendChild(oDiv);//把div追加到body后面
+//    oDiv.choneNode();//克隆一个孩子
+//    oDiv.insertBefore(ff,ll);//在元素前插入一个节点(新参数,原来的参数)
+//    document.body.removeChild();//移除节点
+// var p2 = document.getElementById("p2");
+// p2.parentNode.replaceChild(p1,p2);//p2将被替换成p1，p2消失
+
+//js是用来网页交互的，网页是事件驱动的
+
+//onload 页面完成时触发此事件
+var oImg = new Image();
+oImg.onload =function(){
+
+};//加载完成再获取
+
+//oImg.src = "xx.jpg"
+
+//    onresize 当浏览器的窗口大小改变时出发此事件
+    window.onresize = function(){
+    console.log(document.body.clientWidth);
+    };
+    window.onscroll = function(){
+        var iScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        console.log(iScrollTop);
+    }
+//    oncontextmenu 当弹出右键上下文菜单触发此事件
+
+var oDiv1 = document.getElementById("div1");
+    oDiv1.onclick = function(e){
+        var target = e.target || window.event.srcElement;//获取事件源，因为有兼容性问题
+        console.log(target);
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>
