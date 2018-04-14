@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 400px;
+            height: 400px;
+            background:red;
+        }
+        #div2{
+            width: 300px;
+            height: 300px;
+            background: green;
+        }
+        #div3{
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<!--绑定事件的方式-->
+<div id="div1">
+    <div id="div2">
+        <div id="div3">
+            lll
+        </div>
+    </div>
+</div>
+<script>
+    //事件冒泡:事件会传播，从事件源开始逐层向副元素传播
+//    false是事件冒泡
+//    true是事件捕获：从副元素逐层向事件源触发
+    var oDiv1 = document.getElementById("div1");
+    var oDiv2 = document.getElementById("div2");
+    var oDiv3 = document.getElementById("div3");
+//    oDiv1.onclick = function(){alert(1);};
+//    oDiv1.onclick = function(){alert(2);};//只会弹出2，因为覆盖前边
+
+//    oDiv1.addEventListener("click",function(){
+//        alert(1);
+//    },false);
+//    oDiv1.addEventListener("click",function(){
+//        alert(2);
+//    },false);//(事件类型,事件处理函数,bool)
+//    既会弹出1，又会弹出2，不会覆盖
+//oDiv1.addEventListener("click",function(){
+//    alert("div1");
+//},false);
+//oDiv2.addEventListener("click",function(){
+//    alert("div2");
+//},false);
+//oDiv3.addEventListener("click",function(){
+//    alert("div3");
+//});//先弹出div3，div2，div1，事件冒泡，从事件源向外传播
+
+    //事件捕获
+//    oDiv1.addEventListener("click",function(){
+//        alert("div1");
+//    },true);
+//    oDiv2.addEventListener("click",function(){
+//        alert("div2");
+//    },true);
+//    oDiv3.addEventListener("click",function() {
+//        alert("div3");
+//    },true);//正好与事件冒泡相反，弹出顺序为div1,div2,div3，从外向事件源传播
+//先捕获，后冒泡
+
+//以上为标准浏览器
+
+    //IE6,早期IE不支持捕获，只支持冒泡
+//    oDiv1.attachEvent("onclick",function(){
+//        alert(1);
+//    })
+//封装方法:解决兼容性问题
+    addEvent(oDiv1,"click",function(){
+        alert("123");
+    });
+    function addEvent(elem,type,handler){//(元素,事件，处理函数)
+        if(elem.addEventListener){
+            elem.addEventListener(type,handler);
+        }else if(elem.attachEvent){//attachEvent指向window，绑定顺序是反的
+            elem.attachEvent("on"+type,handler);
+        }else{
+            elem["on"+type] = handler;
+        }
+    }
+
+
+
+//call apply bind
+//    function fn(){
+//        console.log(this);//this指向window
+//    }
+//fn();
+//function mg(){
+//        console.log(this);
+//}
+//var obj = {
+//    name:"zhangsan",
+//    age:20
+//};//new Object()
+//    mg.call(obj);//call 改变了this指向，this指向obj
+//    mg.apply(obj);//改变指向，与call相同，只是参数不同
+
+    function ww(arg1,arg2){
+        console.log(this);
+        console.log(arg1);
+        console.log(arg2);
+    }
+    var obj = {
+        name:"zhangsan",
+        age:29
+    };
+//    ww.call(obj,"123","456");
+//ww.apply(obj,["123","456"]);
+ww.bind(obj,"123","234");//bind也改变指向，但是不立刻执行，call，apply立刻执行
+    ww.bind(obj,"uuu","ddd")();//调用所以立刻执行
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

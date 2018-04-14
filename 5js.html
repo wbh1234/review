@@ -100,7 +100,7 @@ oImg.onload =function(){
         console.log(iScrollTop);
     }
 //    oncontextmenu 当弹出右键上下文菜单触发此事件
-
+//事件三要素:事件源，事件类型，事件对象e(e有兼容性问题)
 var oDiv1 = document.getElementById("div1");
     oDiv1.onclick = function(e){
         var target = e.target || window.event.srcElement;//获取事件源，因为有兼容性问题
