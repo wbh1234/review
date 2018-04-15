@@ -57,6 +57,12 @@
 //    alert("div3");
 //});//先弹出div3，div2，div1，事件冒泡，从事件源向外传播
 
+//    阻止事件冒泡
+    e.stopPropagation();//标准浏览器
+    window.event.cancelBubble = true;//IE6下
+
+
+
     //事件捕获
 //    oDiv1.addEventListener("click",function(){
 //        alert("div1");
@@ -76,18 +82,36 @@
 //        alert(1);
 //    })
 //封装方法:解决兼容性问题
-    addEvent(oDiv1,"click",function(){
-        alert("123");
-    });
-    function addEvent(elem,type,handler){//(元素,事件，处理函数)
-        if(elem.addEventListener){
-            elem.addEventListener(type,handler);
-        }else if(elem.attachEvent){//attachEvent指向window，绑定顺序是反的
-            elem.attachEvent("on"+type,handler);
-        }else{
-            elem["on"+type] = handler;
-        }
-    }
+//    addEvent(oDiv1,"click",function(){
+//        alert("123");
+//    });
+//    function addEvent(elem,type,handler){//(元素,事件，处理函数)
+//        if(elem.addEventListener){
+//            elem.addEventListener(type,handler);
+//        }else if(elem.attachEvent){//attachEvent指向window，绑定顺序是反的
+//            elem.attachEvent("on"+type,handler);
+//        }else{
+//            elem["on"+type] = handler;
+//        }
+//    }
+//    var a = function(){
+//        alert('kk');
+//    };
+//    var b = function(){
+//        alert(555);
+//    };
+//    alert(a === b);//a和b不相同
+
+//标准
+var fn = function(){
+    alert("div1");
+};
+oDiv1.addEventListener("click",fn);//添加一个事件
+oDiv1.removeEventListener("click",fn);//删除一个事件
+//早期IE
+oDiv1.attachEvent("onclick",fn);
+oDiv1.detachEvent("onclick",fn);
+
 
 
 
@@ -117,8 +141,14 @@
     };
 //    ww.call(obj,"123","456");
 //ww.apply(obj,["123","456"]);
-ww.bind(obj,"123","234");//bind也改变指向，但是不立刻执行，call，apply立刻执行
+    ww.bind(obj,"123","234");//bind也改变指向，但是不立刻执行，call，apply立刻执行
     ww.bind(obj,"uuu","ddd")();//调用所以立刻执行
+
+
+
+
+
+
 
 
 

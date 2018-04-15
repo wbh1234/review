@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">add</button>
+<ul id="tab">
+    <li>111</li>
+    <li>222</li>
+    <li>333</li>
+    <li>444</li>
+    <li>555</li>
+
+</ul>
+<script>
+    var oUl = document.getElementById("tab");
+//    var aLi = oUl.getElementsByTagName("li");
+//    for(var i=0; i<aLi.length;i++){
+//        aLi[i].index=i;
+//        aLi[i].onclick = function(){
+////            console.log(this.innerHTML);//弹出内容
+//            console.log(this.index);//输出索引
+
+//        };
+        //闭包
+//        (function(idx){
+//            aLi[idx].onclick = function(){
+//                console.log(idx);
+//            }
+//        })(i);
+
+//    }
+    //事件委托,事件代理
+    oUl.onclick = function(e){
+        var target = e.target || window.event.srcElement;
+        console.log(target.innerHTML);
+    }
+
+var oBtn = document.getElementById("btn");
+oBtn.onclick = function(){
+    var oLi = document.createElement("li");
+    oLi.innerHTML = Math.random();
+    oUl.appendChild(oLi);
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

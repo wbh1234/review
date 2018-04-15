@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #list li:first-child{
+            background: red;
+
+        }
+        #list li:last-child{
+            background: green;
+        }
+        #div li:only-child{
+            font-size:50px;
+        }
+        #list li:nth-child(2n){
+            background:yellow;
+        }
+        #list li:nth-child(2n+1){
+            background: blue;
+        }
+        #div1::after{
+            content:"after";
+        }
+        #div1::before{
+            content: "before";
+            background: red;//插入的是行级元素
+        }
+        #div2{
+            font-size: 20px;
+            text-shadow: 10px 20px 10px red;//(水平偏移值,垂直偏移值,模糊程度,颜色)
+        }
+        #div3{//多余省略
+            border:solid 1px black;
+            width: 100px;
+            height: 20px;
+            -webkit-box-shadow: 10px 10px 10px 10px blue;//元素阴影
+            -moz-box-shadow: 10px 10px 10px 10px blue;
+            box-shadow: 10px 10px 10px 10px blue;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space:nowrap;
+        }
+        #div5{
+            width: 200px;
+            height: 200px;
+            background: red;
+            -webkit-transform: rotate(-30deg);//二维
+            -moz-transform: rotate(-30deg);
+            -ms-transform: rotate(-30deg);
+            -o-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+            margin: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="div1">
+    div
+</div>
+<div id="div2">div2</div>
+<div id="div3">lllllllllllllllllllllllllllllllllllllll</div>
+<ul id="list">
+    <li>111</li>
+    <li>222</li>
+    <li>333</li>
+    <li>444</li>
+    <li>555</li>
+    <li>666</li>
+    <li>777</li>
+    <li>888</li>
+</ul>
+<ul id="div">
+    <li>only one</li>
+</ul>
+//css3兼容性问题
+//  -webkit-xxx     chrome 和 safari
+//  -moz-xxx        firefox
+//  -ms-xxx         IE
+//  -0-xxx          opera
+//  xxx             标准
+
+<!--//弹性盒模型-->
+
+<!--//动画-->
+//transform变形
+<!--rotate旋转-->
+<!--translate位移-->
+<!--scale缩放-->
+<!--skew扭曲-->
+<!--matrix矩阵-->
+<div id="div5">
+        div5
+</div>
+
+
+//transition过渡
+
+
+//animation动画
+<!--需要定义关键帧-->
+
+
+
+
+
+
+
+</body>
+</html>

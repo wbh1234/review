@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div2{
+            width:200px;
+            height:200px;
+            background:green;
+            margin:10px;
+            padding:10px;
+            border:solid 2px blue;
+        }
+    </style>
+</head>
+<body>
+<div id="div1" style="width: 200px; height: 200px; background: red;"></div>
+<!--内联样式-->
+<div id="div2">
+    
+</div>
+
+<script>
+    var oDiv = document.getElementById("div1");
+    console.log(oDiv.style.width);
+//    内联样式可以取到，其他不可
+
+    var oDiv2 = document.getElementById("div2");
+//    console.log(getComputedStyle(oDiv2,null).height);
+//标准浏览器获取样式
+//    console.log(oDiv2.currentStyle.width);
+//    IE浏览器
+        console.log(oDiv2.offsetWidth);//包括padding border,不包括margin
+        console.log(oDiv2.offsetHeight);
+        console.log(oDiv2.offsetLeft);//离他最近的已经定位的祖先元素的距离
+        console.log(oDiv2.offsetTop);
+        console.log(oDiv2.offsetParent);//离他最近的已经定位的祖先元素
+
+
+    //jquery获取高度
+    //width():内容
+    //innerWidth():内容+padding
+    //outerWidth():内容+padding +border
+    //outerWidth(true):内容+padding+border+margin
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
