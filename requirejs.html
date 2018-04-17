@@ -19,8 +19,26 @@
 
     });
 //轮播图 弹出层
-//AMD:异步的模块定义，依赖前置
-//CMD:通用的模块定义，依赖就近
+//AMD(asvnchronization module define):异步的模块定义，依赖前置 requirejs
+
+//CMD(common module define):通用的模块定义，依赖就近  seajs
+
+//差异AMD 是 RequireJS 在推广过程中对模块定义的规范化产出
+//    CMD 是 SeaJS在推广中对模块定义的规范化产出
+//    对于依赖的模块，AMD是提前执行，CMD是延迟执行，不过RequireJS从2.0开始，也改成可以延迟执行(根据写法不同，处理方式不同)
+//    script 解析 网络下载 执行 解析
+//    script defer 解析的过程中同步网络下载 解析完成后执行
+//    script async 解析的过程中同步网络下载，网络下载完成后立即执行，执行后再解析
+
+
+
+
+
+
+
+
+
+
 </script>
 
 

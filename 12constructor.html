@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = 'abc';
+    var arr =[1,2,3];
+    var obj = {
+        name:'lisi'
+    }
+    console.log(typeof arr);//返回object
+    console.log(typeof str);
+    console.log(typeof obj);
+    //返回的是构造函数
+
+    console.log(arr.constructor);
+    console.log(obj.constructor);
+
+//    instanceof 判断array是否是构造函数的实例
+    console.log(arr instanceof Array);
+    console.log(obj instanceof Array);
+</script>
+</body>
+</html>
