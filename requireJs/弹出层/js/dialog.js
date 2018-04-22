@@ -16,7 +16,8 @@ define(["jquery"],function($){
         this.$main = $('<div class="dialog-main"></div>');
         this.$title = $('<div class="dialog-title"></div>');
         this.$item = $('<div class="dialog-title-item">弹出层</div>');
-        this.$close = $('<div class="dialog-title-close">[X]</div>');
+        this
+            .$close = $('<div class="dialog-title-close">[X]</div>');
         this.$content = $('<div class="dialog-content"></div>');
         this.defaultSetting = {
             width:500,
