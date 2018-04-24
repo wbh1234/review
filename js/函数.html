@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    <!--变量命名规则:首字母必须是字母或下划线或$,首字母以外的字符可以是字幕数字下划线,$-->
+//    命名规范
+    function sayHello(name, age){
+// arguments是函数中的一个数组，用来引用所有实参
+//alert(name +'sayHello' + age + arguments[2]);
+    }
+    sayHello('zhangsan', 23,'男');
+function add(a, b){
+    return a+b;
+}
+var c = add(3, 4);
+//console.log(c);
+
+
+//函数式编程 objective c => swift
+function test(){
+
+}
+var test = function(){
+
+};
+var test = new Function();
+
+
+var a = function (){
+//    alert('hahah');
+};
+function test1(b){
+    b();
+}
+test1(a);
+
+function test2(a){
+    a('xixiix');
+}
+test2(function(b){
+//    alert(b)
+});
+
+function test3(a){
+    a(function(c){
+        alert(c)
+    })
+}
+
+test3(function(b){
+    b('hehehh')
+});
+//js是单线程,异步加载,回调函数
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

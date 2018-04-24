@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var a=0x;
+//
+//var person = {
+//    name:'lisi',
+//    brother:{
+//        name:'liwu',
+//        wife:{
+//            name:'xxx'
+//        }
+//    }
+//};
+//person.brother.wife.name();
+
+
+//运算符优先级
+
+
+var a = Math.floor(Math.random()*36 + 1);
+var b = Math.floor(Math.random()*36 + 1);
+//if(a > b){
+//    console.log('a'+ a);
+//}else{
+//   console.log('b'+ b);
+//}
+
+//console.log(a>b?a:b);
+
+var c = Math.max(a,b);
+//console.log(c)
+
+
+var year = new Date();
+var now = year.getFullYear();
+var month = year.getMonth()+ 1;
+var data = year.getDate();
+var day = year.getDay();
+console.log(month);
+console.log(data);
+console.log(day);
+
+var toYear = year.getFullYear();
+if(toYear % 4 == 0){
+    if(toYear % 100 == 0){
+        if(toYear % 400 ==0){
+            console.log(toYear + "是闰年");
+        }else{
+            console.log(toYear + "不是闰年");
+        }
+    }else{
+        console.log(toYear + "是闰年");
+    }
+}else{
+    console.log(toYear + "不是闰年")
+}
+
+function isLeapYear(year){
+    if((year % 4 == 0 && year % 100 !=0) ||(year % 400 == 0)){
+        return true;
+    }
+    return false;
+}
+
+var now1 = new Date();
+var result = isLeapYear(now1.getFullYear());
+console.log(result);
+
+
+//获取用户的输入
+//var age = window.prompt('请输入');
+
+//if(age < 14){
+//    console.log("儿童");
+//}else if(age < 24){
+//    console.log("青少年");
+//}else if(age < 40){
+//    console.log("青年");
+//}else if(age < 60){
+//    console.log("中年");
+//}else{
+//    console.log("老年");
+//}
+
+//var number = 10;
+////var sum = 1;
+//for(var i=1; i< 11 ; i++){
+//    sum = sum * i;
+//}
+//console.log(sum);
+
+
+function factorial(n){
+    var sum = 1;
+    for(var i=1; i<= n.length ; i++){
+        sum = sum * i;
+    }
+    return  sum;
+}
+console.log(factorial(3))
+
+
+
+
+</script>
+</body>
+</html>

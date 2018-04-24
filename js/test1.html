@@ -13,8 +13,13 @@ js脚本语言，不是编程语言
 var (variable:变量)
 js弱类型语言:不用额外记忆改变,缺点:数据类型混乱
 js类型：
-    1：基本类型：
-    2：引用类型：
+    1：基本类型：number string boolean undefined null
+    2：引用类型：内置对象 自定义对象 dom对象
+    对象:万物皆对象 everthing is object
+    属性:
+    方法:
+
+    NaN :not a number
 
 -->
 <button id="btn">hhh</button>
@@ -32,18 +37,58 @@ document.write("<h2>dddddddd</h2>");
     var btn = document.getElementById("btn");
     btn.onclick= function(){
         alert("ahhahah");
+    };
+var a=5;
+var str = "skk";
+
+
+console.log(typeof a);
+console.log(typeof str);
+
+var g = 4;
+switch(g){
+    case 3:
+//        alert(3);
+    case 4:
+//        alert(4);
+}
+
+var c = 'h';
+switch(c){
+    case 'c':
+    case 'C':
+        alert('yes');
+    case 'b':
+    case 'B':
+        alert('no');
+    default:
+        alert('neutral')
+}
+//if…else 只能给固定的值，带区间
+
+//循环
+//由计数器控制的循环(for)
+//在循环开头测试表达式(whlie)
+//在循环末尾测试表达式(do/while)
+//对对象的每个属性都进行操作(for/in)
+
+//for(var i=0; i<5;i+=2){
+//    console.log(i);
+//}
+
+var i = 0;
+while(i<5){
+    i++;
+    if(i == 3){
+//        continue;
+        break;
     }
-
-
-
-
-
-
-
-
-
-
-
+//    console.log(i);
+}
+var m = 0;
+do{
+    console.log(m);
+}while(m<0);
 
 
 
