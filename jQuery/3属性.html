@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1"></div>
+<input type="text" value="lll" id="username">
+
+<h1>你的爱好是:</h1>
+<from action="return false">
+    <input type="checkbox" name="hobby">足球
+    <input type="checkbox" name="hobby">篮球
+    <input type="checkbox" name="hobby">排球
+    <input type="checkbox" name="hobby">乒乓球
+
+</from>
+<br>
+<button id="check-all">全选</button>
+<button id="check-none">全不选</button>
+<button id="check-oppose">反选</button>
+<script src="jquery-1.12.4.js"></script>
+<script>
+//    var oDiv1= document.getElementById("div1");
+//    oDiv1.index = 5;
+//    console.log(oDiv1.index);
+//
+//    oDiv1.setAttribute("aa","123");//属性
+//    console.log(oDiv1.getAttribute("aa"));
+//    区别:都能设置属性，保存值，但是前者不出现在dom结构里，后者出现在dom结构里
+
+    $(function(){
+        var $div1 = $("#div1");//缓存变量，加快速度
+
+//        $("#div1").attr("bb","123");
+//        console.log($("#div1").attr("bb"));
+//        $("#div1").prop("cc","234");
+//        console.log($("#div1").prop("cc"));
+//        $("#div1").removeAttr("bb","123");
+//        $("#div1").removeProp("cc","234");
+//        console.log($("#div1").attr("bb"));
+
+        $div1.attr("bb","123");
+        console.log($div1.attr("bb"));
+        $div1.prop("cc","234");
+        console.log($div1.prop("cc"));
+        $div1.removeAttr("bb","123");
+        $div1.removeProp("cc","234");
+        console.log($div1.attr("bb"));
+
+        $(" #username").val();
+        console.log($(" #username").val());
+        $(" #username").val("2222");
+        console.log($(" #username").val("2222"));
+//无参数时是取值，有参数时是设置值
+
+var $hobbys = $("input[name='hobby']");
+$("#check-all").on("click",function(){
+    $hobbys.prop("checked","true");
+});
+$("#check-none").on("click",function(){
+    $hobbys.removeProp("checked","true");
+});
+$("#check-oppose").on("click",function(){
+    $hobbys.each(function(index,elem){
+//        if($(elem).prop("checked")){
+//            $(elem).removeProp("checked");
+//        }else{
+//            $(elem).prop("checked","true");
+//        }
+        this.checked = !this.checked;
+    });
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
