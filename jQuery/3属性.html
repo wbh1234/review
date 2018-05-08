@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .aa{
+            background: red;
+        }
+    </style>
 </head>
 <body>
 <div id="div1"></div>
@@ -20,6 +25,10 @@
 <button id="check-all">全选</button>
 <button id="check-none">全不选</button>
 <button id="check-oppose">反选</button>
+
+<div id="div3">
+    div3
+</div>
 <script src="jquery-1.12.4.js"></script>
 <script>
 //    var oDiv1= document.getElementById("div1");
@@ -32,7 +41,7 @@
 
     $(function(){
         var $div1 = $("#div1");//缓存变量，加快速度
-
+        var $div3 = $("#div3");
 //        $("#div1").attr("bb","123");
 //        console.log($("#div1").attr("bb"));
 //        $("#div1").prop("cc","234");
@@ -72,6 +81,26 @@ $("#check-oppose").on("click",function(){
         this.checked = !this.checked;
     });
 })
+//$("#div3").addClass("aa");
+$("#div3").css("background","green").css("color","purple");//增加到内联样式中
+$div3.css({
+    background:"red",
+    border:"10px solid green",
+    fontSize:"30px",
+    borderLeftColor:"blue",
+    width:"200px"
+});
+
+//$div3.css("width", function(){
+//    return 300;
+//});
+//alert($div3.hasClass("aa"))不能进行链式操作
+$div3.on("click",function(){
+   $div3.toggleClass("aa");//有给你去掉，没有给你加上
+});
+alert($div3.offsetLeft);
+
+
 
 
 

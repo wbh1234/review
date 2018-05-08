@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height:200px;
+            background: red;
+            padding: 20px;
+            border: 3px solid green;
+            margin-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<div class="container">
+    <div class="inner first">Hello</div>
+    <div class="inner second">And</div>
+    <div class="inner third">GoodBye</div>
+</div>
+<input type="text" id="search">
+<ul id="result">
+    <li>iphone</li>
+    <li>huawei</li>
+    <li>xiaomi</li>
+</ul>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function(){
+        var $div1 = $("#div1");
+        console.log($div1.width());//content
+        console.log($div1.innerWidth());//content + padding
+        console.log($div1.outerWidth());//content + padding + border
+        console.log($div1.outerWidth(true));//content + padding + border + margin
+
+
+//      位置
+        console.log($div1.position());//相对于最近的已经定位的元素的距离
+        console.log($div1.offset());//距离浏览器的距离
+        console.log($div1.offsetParent());
+
+        var $h1 = $("<h1>hhhh</h1>");
+//        $div1.append($h1).css("background","green");
+//        $h1.appendTo($div1).css("background", "green");
+//        $div1.prepend($h1).css("background","purple");
+        $h1.prependTo($div1).css("background","blue");
+//        $h1.html('<h1>hhhhh</h1>');//不写参数时是取值，写参数时是赋值(替换)
+
+        console.log($h1.html());
+            $h1.text('<h2>hhhhh</h2>');
+        console.log($h1.text());
+    $div1.empty();//清空内容
+//        $div1.remove();清空全部
+
+//    $('<h2>New Heading</h2>').replaceAll('.inner');
+$('div.second').replaceWith('<h2>New heading</h2>')
+ var $input = $("#search");
+        $input.on("keyup",function(){
+            $("#result li").css("background","transparent");
+            if($(this).val() != ""){
+                $("#result li:contains("+  $(this).val().toLowerCase()+")").css("background","red");
+
+            }
+//            $("#result li:contains("+  $(this).val()+")").css("background","red");
+        })
+    })
+
+
+
+
+</script>
+</body>
+</html>
