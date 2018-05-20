@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--undefined Null Boolean Number String-->
+<script>
+//    var message = "some string"
+//    alert(typeof message);
+//    alert(typeof(message));
+//    alert(typeof 75)
+
+
+//    undefined类型 (undefined)
+//    var message;
+//    alert(message == undefined);
+//alert(message);//undefined
+//    alert(age);//错误
+//alert(typeof message);//undefined
+//alert(typeof age);//undefined
+
+
+//null类型 (null)
+//    var car = null;
+//    alert(car);//null
+//    alert(typeof car);//object
+//    alert(null == undefined)
+
+//  boolean类型  (true和false)区分大小写
+//    var found = true;
+//    var lost = false;
+//    alert(found);
+//    alert(lost);
+//    var message = "Hello world";
+//    var messageAsBoolean = Boolean(message);
+//    alert(messageAsBoolean)
+
+//    var message = "";
+//    if(message){
+//        alert("Value is true");
+//    }else{
+//        alert("Value is not a true");
+//    }
+
+
+//    number类型(整数和浮点数值)
+//整数
+//    var intNum = 55;
+//    alert(intNum);
+//var octalNum1 =070;
+//var octalNum2 = 079;
+//var octalNum3 = 08;
+//var hexNum1 = 0xA;
+//var hexNum2 = 0x1f;
+//    alert(hexNum2);
+
+//    浮点数
+//    var floatNum1 = 1.1;
+//    var floatNum2 = 0.1;
+//    var floatNum3 = .1;有效但是不推荐使用
+//    alert(floatNum3);
+//var floatNum = 3.125e7;
+//alert(floatNum);
+
+//    var result = Number.Max_VALUE + Number.MAX_VALUE;
+//    alert(isFinite(result));
+//alert(NaN == NaN);false
+
+//    isNaN()任何不能被转换成数值的值都会返回true
+//    alert(isNaN(NaN));true
+//    alert(isNaN(10));false
+//    alert(isNaN("10"));false
+//    alert(isNaN("blue"));true
+//    alert(isNaN(true));false
+
+//    数值转换
+//var num1 = Number("Hello world");//NaN
+//var num2 = Number("");//0
+//var num3 = Number("0000011");//11
+//var num4 = Number(true);//1
+//alert(num1);
+//alert(num2);
+//alert(num3);
+//alert(num4);
+
+//    var num1 = parseInt("1234blue");//1234
+//    var num2 = parseInt("");//NaN
+//    var num3 = parseInt("0xA");
+//    var num4 = parseInt(22.5);
+//    var num5 = parseInt("070");
+//    var num6 = parseInt("0xf");
+//    alert(num1);
+//alert(num2);
+//alert(num3);
+//alert(num4);
+//alert(num5);
+//alert(num6);
+//var num = parseInt("070");
+//alert(num);
+//var num = parseInt("AF",16);//175
+//var num = parseInt("AF");//NaN
+//alert(num);
+//var num1= parseInt("10",2);
+//var num2= parseInt("10",8);
+//var num3= parseInt("10",10);
+//var num4= parseInt("10",16);
+//alert(num1);
+//alert(num2);
+//alert(num3);
+//alert(num4);
+
+//parseFloat()
+//var num1 = parseFloat("1234blue");1234
+//var num2 = parseFloat("0xA");0
+//var num3 = parseFloat(22.5);
+//var num4 = parseFloat("22.22.5");22.22
+//var num5 = parseFloat("0908.5");908.5
+//var num6 = parseFloat("3.125e7");
+//alert(num1);
+//alert(num2);
+//alert(num3);
+//alert(num4);
+//alert(num5);
+//alert(num6);
+
+//string类型
+
+//var text = "This is the letter sigma: \u03a3";
+//var i;
+//for(i=0 ;i<=text.length;i++){
+//    i++;
+//}
+//alert(i);
+//    alert(text.length);
+//var lang = "Java";
+//lang = lang +"Script";
+//alert(lang);
+//转换为字符串
+//var age = 11;
+//var ageAsString = age.toString();
+//alert(ageAsString);
+//var found = true;
+//var foundAsString = found.toString();
+//alert(foundAsString);
+
+//var num=10;
+//alert(num.toString());
+//alert(num.toString(2));
+//alert(num.toString(8));
+//alert(num.toString(16));
+
+//    var value1 = 10;
+//    var value2 = true;
+//    var  value3 = null;
+//    var value4;
+//    alert(String(value1));
+//    alert(String(value2));
+//    alert(String(value3));
+//    alert(String(value4));
+
+//    object类型
+
+//    var o = new Object();
+
+//    操作符
+//前置操作符
+//    var age = 29;
+//    ++age;
+//    --age;
+//    alert(age);
+//    var age = 29;
+//    var anotherAge = --age + 2;
+//    alert(age);
+//    alert(anotherAge);
+
+//    var num1 = 2;
+//    var num2 = 20;
+//    var num3 = --num1 + num2;
+//    var num4 = num1 + num2;
+//    alert(num3);//21
+//    alert(num4);//21
+//后置操作符
+//var age = 29;
+//age++;
+//alert(age);
+
+//    var num1 = 2;
+//    var num2 = 20;
+//    var num3 = num1-- + num2;
+//    var num4 = num1 + num2;
+//    alert(num3);//22
+//    alert(num4);//21
+//    var s1 = "2";
+//    var s2 = "z";
+//    var b = false;
+//    var f = 1.1;
+//    var o = {
+//        valueOf: function(){
+//            return -1;
+//        }
+//    };
+//    s1++;
+//    s2++;
+//    b++;
+//    f--;
+//    o--;
+//    console.log(s1);
+//console.log(s2);
+//console.log(b);
+//console.log(f);
+//console.log(o);
+
+//    一元加操作符一元减操作符
+ var s1 = "01";
+ var s2 = "1.1";
+ var s3 = "z";
+ var b = false;
+ var f = 1.1;
+ var o = {
+     valueOf:function(){
+         return -1;
+     }
+ };
+// s1 = +s1;
+// s2 = +s2;
+// s3 = +s3;
+// b = +b;
+// f = +f;
+// o = +o;
+// console.log(s1);
+//console.log(s2);
+//console.log(s3);
+//console.log(b);
+//console.log(f);
+//console.log(o);
+s1 = -s1;
+s2 = -s2;
+s3 = -s3;
+b = -b;
+f = -f;
+o = -o;
+ console.log(s1);
+console.log(s2);
+console.log(s3);
+console.log(b);
+console.log(f);
+console.log(o);
+
+//位操作符
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
