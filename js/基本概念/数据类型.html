@@ -299,6 +299,237 @@
 //    alert(result);
 
 
+//var result = 66/11;
+//alert(result);
+
+//    加法
+//    var result1 = 5 + 5;
+//    alert(result1)
+//var result2 = 5 + "5";
+//alert(result2)
+
+//    var num1 = 5;
+//    var num2 = 10;
+//    var message = "The sum of 5 and 10 is" +(num1+num2);
+//    alert(message);
+
+//    减法
+//var result = 2-1;
+//alert(result);
+//
+//    var result1 = 5 - true;
+//    var result2 = NaN -1;
+//    var result3 = 5-3;
+//    var result4 = 5-"";
+//    var result5 = 5-"2";
+//    var result6 = 5-null;
+//    alert(result1)
+//    alert(result2)
+//    alert(result3)
+//    alert(result4)
+//    alert(result5)
+//    alert(result6)
+
+
+//    关系操作符
+//    var result = "Brick" < "alphabet"
+//    alert(result);
+
+//    var result = "Brick".toLowerCase() < "alphabet".toLowerCase();
+//    alert(result)
+//var result = "23" < "3"
+//    alert(result)
+// var result = "23" < 3;
+//    alert(result)
+
+//    var result="a" < 3;
+//    alert(result)
+
+//    var result1 = NaN < 3;
+//    var result2 = NaN>= 3;
+//    alert(result1);
+//    alert(result2);
+
+//    相等操作符
+//var result = (null == undefined);
+//var result = ("NaN" == NaN);
+//var result = (5 == NaN);
+//var result = (NaN == NaN);
+//var result = (NaN !=NaN);
+//var result = (false == 0);
+//var result = (true==1);
+//var result = (true == 2);//false
+//var result = (undefined == 0);
+//var result = (null == 0);
+//var result =("5"==5);
+//alert(result)
+
+//    条件操作符
+//逗号操作符
+//    var num = (5,1,4,8,0);
+//    alert(num);
+
+//语句
+//if
+//    var i = 25;
+//    if(i>25){
+//        alert("Greater than 25");
+//    }else if(i < 0){
+//        alert("Less than 0")
+//    }else{
+//        alert("Between 0 and 25, inclusive.")
+//    }
+//do -while
+//var i = 0;
+//do{
+//    i += 2;
+//
+//}while(i<50);
+//    alert(i);
+//while语句
+//var i = 0;
+//while(i<10){
+//    i += 2;
+//}
+//alert(i);
+//    for语句
+
+//    var count = 10;
+//    for (var i = 0; i<count;i++){
+//        alert(i)
+//    }
+//var count = 10;
+//var i =0;
+//while (i< count){
+//    alert(i);
+//    i++;
+//}
+//var count = 10;
+//var i;
+//for(i =0;i<count;i++){
+//    alert(i);
+//}
+//alert(i);
+
+//var count = 10;
+//var i = 0;
+//for(; i < count; ){
+//    alert(i);
+//    i++;
+//}
+//for-in语句
+//for (var propName in window){
+//    document.write(propName);
+//}
+//通过for in 循环输出的属性名的顺序是不可预测的，但是如果要迭代的对象变量值是null 或undefined则，for in会抛出错误
+
+//    label语句
+//break和continue语句
+//var count=10;
+//state:for(var i = 0;i<count;i++){
+//    alert(i);
+//}
+//var num = 0;
+//for (var i = 1; i < 10; i++){
+//    if(i% 5 == 0){
+//        break;
+//    }
+//    num++;
+//}
+//alert(num);
+
+//    var num = 0;
+//    for(var i =1; i<10;i++){
+//        if(i % 5 == 0){
+//            continue;
+//        }
+//        num++;
+//    }
+//    alert(num);
+
+//    var num=0;
+//
+//    outermost:
+//    for(var i=0;i< 10;i++){
+//        for(var j =0;j<10;j++){
+//            if(i ==5 && j ==5){
+//                break outermost;
+//            }
+//            num++;
+//        }
+//    }
+//    alert(num);
+
+//    var num = 0;
+//    outermost:
+//    for(var i =0;i<10;i++){
+//        for(var j=0;j<10;j++){
+//            if(i == 5 && j == 5){
+//                continue outermost;
+//            }
+//            num++;
+//        }
+//    }
+//    alert(num);
+//    var qs = location.search.substring(1);
+//    var hostName = location.hostname;
+//    var url = location.href;
+//
+//    with(location){
+//        var qs = search.substring(1);
+//        var hostName = hostname;
+//        var url = href;
+//    }
+
+//switch语句
+//var num = 25;
+//switch(true){
+//    case num < 0:
+//        alert("Less than 0.");
+//        break;
+//    case num >= 0 && num <=10:
+//        alert("Between 0 and 10.");
+//        break;
+//    case num>10 && num<=20:
+//        alert("Between 10 and 20.");
+//        break;
+//    default:
+//        alert("More than 20.")
+//
+//}
+
+
+//函数
+//function sayHi(name,message){
+//    alert("Hello" + name + "," + message);
+//}
+//sayHi("wang","baihui");
+
+//    function sum(num1,num2){
+//        return num1+num2;
+//    }
+//    var result = sum(1,2);
+//    alert(result)
+
+//    function howManyArgs(){
+//        alert(arguments.length);
+//    }
+//    howManyArgs("string",45);
+//    howManyArgs();
+//    howManyArgs(12);
+
+//    function doAdd() {
+//        if(arguments.length == 1){
+//            alert(arguments[0]+10);
+//        }else if(arguments.length == 2){
+//            alert(arguments[0]+arguments[1]);
+//        }
+//    }
+//    doAdd(10);
+//    doAdd(30,20);
+
+
+
 
 
 
