@@ -146,7 +146,13 @@
 //alert(getColor());
 
     //垃圾收集
-
+function createPerson(name){
+    var localPerson = new Object();
+    localPerson.name = name;
+    return localPerson;
+}
+var globalPerson =  createPerson("Nicholas");
+globalPerson = null;
 
 
 
