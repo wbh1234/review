@@ -376,7 +376,7 @@
 //alert(matches[2]);
 
 
-var text = "cat, bat, sat, fat";
+//var text = "cat, bat, sat, fat";
 //var pattern1 = /.at/;
 
 //var matches = pattern1.exec(text);
@@ -414,6 +414,73 @@ var text = "cat, bat, sat, fat";
 //    alert(pattern.toLocaleString());
 
 //    RegExp构造函数属性
+//var text = "this has been a short summer";
+//var pattern = /(.)hort/g;
+
+//if(pattern.test(text)){
+//    alert(RegExp.input);
+//    alert(RegExp.leftContext);
+//    alert(RegExp.rightContext);
+//    alert(RegExp.lastMatch);
+//    alert(RegExp.lastParen);
+//    alert(RegExp.multiline);
+//}
+
+//    if(pattern.test(text)){
+//        alert(RegExp.$_);
+//        alert(RegExp["$`"]);
+//        alert(RegExp["$'"]);
+//        alert(RegExp["$&"]);
+//        alert(RegExp["$+"]);
+//        alert(RegExp["$*"]);
+//    }
+
+//    var text = "this has been a short summer";
+//    var pattern = /(..)or(.)/g;
+//
+//    if(pattern.test(text)){
+//        alert(RegExp.$1);
+//        alert(RegExp.$2);
+//    }
+    //模式的局限性
+
+//    1.匹配字符串开始和结尾的\A和\Z锚；
+//    2.向后查找(lookbehind);
+//    3.并集和交集类；
+//    4.原子组；
+//    5.Unicode支持(单个字符除外，如\uFFFF);
+//    6.命名的捕获组；
+//    7.s(single,单行)和x(free-spacing,无间隔)匹配模式；
+//    8.条件匹配；
+//    9.正则表达式注释
+
+
+//function类型
+//    function sum(num1,num2){
+//        return num2 + num2;
+//    }
+//    var sum = function(num1,num2){
+//        return num1+num2;
+//    };
+//    var sum = new Function("num1","num2","return num1+num2");//不推荐
+
+    function sum(num1 , num2){
+        return num1 + num2;
+    }
+    alert(sum(10,20));
+
+    var anotherSum = sum;
+    alert(anotherSum(10,20));
+    sum=null;
+    alert(anotherSum(10,20));
+
+
+
+
+
+
+
+
 
 
 
