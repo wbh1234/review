@@ -592,18 +592,198 @@
 //    outer();
 
 //函数属性和方法
+//    function sayName(name){
+//        alert(name);
+//    }
+//
+//    function sum(num1,num2){
+//        return num1 + num2;
+//    }
+//
+//    function sayHi(){
+//        alert("hi");
+//    }
+//    alert(sayName.length);
+//    alert(sum.length);
+//    alert(sayHi.length);
 
 
+//    function sum(num1,num2){
+//        return num1+num2;
+//    }
+//
+//    function callSum1(num1, num2){
+//        return sum.apply(this,arguments);
+//    }
+//
+//    function callSum2(num1,num2){
+//        return sum.apply(this,[num1,num2]);
+//    }
+//
+//    alert(callSum1(10,10));
+//    alert(callSum2(10,10));
+
+//    function sum(num1, num2){
+//        return num1 + num2;
+//    }
+//    function callSum(num1,num2){
+//        return sum.call(this,num1,num2);
+//    }
+//    alert(callSum(10,10));
+
+    window.color = "red";
+//    var o = {color:"blue"};
+//
+//    function sayColor(){
+//        alert(this.color);
+//    }
+//    sayColor.call(this);
+//    sayColor.call(window);
+//    sayColor.call(o);
+
+    window.color = "red";
+//    var o ={color:"blue"};
+//    function sayColor(){
+//        alert(this.color);
+//    }
+//    var objectSayColor = sayColor.bind(o);
+//    objectSayColor();
+
+//基本包装类型
+//    var s1 = "somoe text";
+//    var s2 = s1.substring(2);
+//    var s1= "some text";
+//    s1.color = "red";
+//    alert(s1.color);
+
+//    var obj = new Object("some text");
+//    alert(obj instanceof String);
+
+//    var value = "25";
+//    var number = Number(value);
+//    alert(typeof number);
+//    var obj = new Number(value);
+//    alert(typeof obj);
+
+//    Boolean类型
+//        var booleanObject = new Boolean(true);
+
+//    var falseObject = new Boolean(false);
+//    var result = falseObject && true;
+//    alert(result);
+//
+//    var falseValue = false;
+//    result = falseValue && true;
+//    alert(result);
+//
+//    alert(typeof falseObject);
+//    alert(typeof falseValue);
+//    alert(falseObject instanceof Boolean);
+//    alert(falseValue instanceof Boolean);
+
+//Number 类型
+//    var numberObject = new Number(10);
+//    var num = 10;
+//    alert(num.toString());
+//    alert(num.toString(2));
+//    alert(num.toString(8));
+//    alert(num.toString(16));
+//    alert(num.toString(10));
 
 
+//    var num = 10;
+//    alert(num.toFixed(2));
 
+//    var num = 10;
+//    alert(num.toExponential(1));
 
+//    var num = 99;
+//    alert(num.toPrecision(1));
+//    alert(num.toPrecision(2));
+//    alert(num.toPrecision(3));
 
+//    var numberObject = new Number(10);
+//    var numberValue = 10;
+//    alert(typeof numberObject);
+//    alert(typeof numberValue);
+//    alert(numberObject instanceof Number);
+//    alert(numberValue instanceof Number);
 
+//    String类型
+//    var stringObject = new String("hello world");
 
+//    var stringValue = "hello world";
+//    alert(stringValue.length);
+//1:字符方法
+//    var stringValue = "hello world";
+//    alert(stringValue.charAt(1));
+//    alert(stringValue.charCodeAt(1));
+//    alert(stringValue[1]);
+//2:字符串操作方法
+//    var stringValue = "hello";
+//    var result = stringValue.concat("world");
+//    alert(result);
+//    alert(stringValue);
 
+//    var stringValue= "hello";
+//    var result = stringValue.concat("world","!");
+//    alert(result);
+//    alert(stringValue);
 
+//    var stringValue = "hello world";
+//    alert(stringValue.slice(3));
+//    alert(stringValue.substring(3));
+//    alert(stringValue.substr(3));
+//    alert(stringValue.slice(3,7));
+//    alert(stringValue.substring(3,7));
+//    alert(stringValue.substr(3,7));
 
+//    var stringValue = "hello world";
+//    alert(stringValue.slice(-3));
+//    alert(stringValue.substring(-3));
+//    alert(stringValue.substr(-3));
+//    alert(stringValue.slice(3,-4));
+//    alert(stringValue.substring(3,-4));
+//    alert(stringValue.substr(3,-4));
+
+//    3:字符串位置方法
+//    var stringValue = "hello world";
+//    alert(stringValue.indexOf("o"));
+//    alert(stringValue.lastIndexOf("o"));
+
+//    var stringValue = "hello world";
+//    alert(stringValue.indexOf("o",6));
+//    alert(stringValue.lastIndexOf("o",6));
+
+//    var stringValue ="Lorem ipsum sit amet, consectetur adipisicing elit";
+//    var positions = new Array();
+//    var pos = stringValue.indexOf("e");
+//
+//    while(pos > -1){
+//        positions.push(pos);
+//        pos = stringValue.indexOf("e",pos+1);
+//    }
+//    alert(positions);
+
+//    4:frim()方法
+//var stringValue = " hello world ";
+//var trimmedStringValue = stringValue.trim();
+//alert(stringValue);
+//alert(trimmedStringValue);
+//5:字符串大小写转换方法
+
+//    var stringValue = "hello world";
+//    alert(stringValue.toLocaleUpperCase());
+//    alert(stringValue.toUpperCase());
+//    alert(stringValue.toLocaleLowerCase());
+//    alert(stringValue.toLowerCase());
+//6:字符串的模式匹配方法
+    var text = "cat, bat, sat, fat";
+    var pattern = /.at/;
+    var matches = text.match(pattern);
+    alert(matches.index);
+    alert(matches[0]);
+    alert(pattern.lastIndex);
 
 
 
