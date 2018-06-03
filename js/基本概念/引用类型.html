@@ -778,12 +778,135 @@
 //    alert(stringValue.toLocaleLowerCase());
 //    alert(stringValue.toLowerCase());
 //6:字符串的模式匹配方法
-    var text = "cat, bat, sat, fat";
-    var pattern = /.at/;
-    var matches = text.match(pattern);
-    alert(matches.index);
-    alert(matches[0]);
-    alert(pattern.lastIndex);
+//    var text = "cat, bat, sat, fat";
+//    var pattern = /.at/;
+//    var matches = text.match(pattern);
+//    alert(matches.index);
+//    alert(matches[0]);
+//    alert(pattern.lastIndex);
+
+//    var text = "cat, bat, sat, fat";
+//    var result = text.replace("at","ond");
+//    alert(result);
+//
+//    result = text.replace(/at/g, "ond");
+//    alert(result);
+
+//    var text = "cat, bat, sat, fat";
+//    result = text.replace(/(.at)/g,"word ($1)");
+//    alert(result);
+
+//    function htmlEscape(text){
+//        return text.replace(/[<>"&]/g,function(match, pos, originalText){
+//            switch(match){
+//                case "<":
+//                    return "&lt;";
+//                case ">":
+//                    return "&gt;";
+//                case "&":
+//                    return "&amp;";
+//                case "\"":
+//                    return "&quot;";
+//            }
+//        });
+//    }
+//    alert(htmlEscape("<p class=\"greeting\">Hello world!</p>"));
+
+//    var colorText = "red,blue,green,yellow";
+//    var color1 = colorText.split(",");
+//    var color2 = colorText.split(",",2);
+//    var color3 = colorText.split(/[^\,]+/);
+//    alert(color1);
+//    alert(color2);
+//    alert(color3);
+
+//    7:localeCompare()方法
+
+//    var stringValue = "yellow";
+//    alert(stringValue.localeCompare("black"));
+//    alert(stringValue.localeCompare("yellow"));
+//    alert(stringValue.localeCompare("zoo"));
+
+//function determineOrder(value){
+//    var result =stringValue.localeCompare(value);
+//    if(result < 0){
+//        alert("The string 'yellow' comes before the string '" + value + "'." );
+//    }else if(result > 0){
+//        alert("The string 'yellow' comes before the string'" + value + "'.");
+//    }else{
+//        alert("The string 'yellow' comes before the string'" + value + "'.");
+//    }
+//}
+//determineOrder("brick");
+//determineOrder("yellow");
+//determineOrder("zoo");
+
+//    8:formCharCode()方法
+//    alert(String.fromCharCode(104, 101, 108, 108, 111));
+
+//    9:HTML方法
+
+
+
+//    5.7单体内置对象
+//1:global(全局)对象
+//    var uri = "http://www.wrox.com/illegal value.html#start";
+//    alert(encodeURI(uri));
+//    alert(encodeURIComponent(uri));
+
+//    eval()方法
+//    eval("alert('hi')");
+//    alert("hi");
+
+//    var msg = "hello world";
+//    eval("alert(msg)");
+
+//    eval("function sayHi() { alert('hi');}");
+//    sayHi();
+
+//    eval("var msg = 'hello world';");
+//    alert(msg);
+
+//    global对象的属性
+
+//    window对象
+
+//    var color = "red";
+//    function sayColor(){
+//        alert(window.color);
+//    }
+//    window.sayColor();
+
+//    Math对象
+//var max = Math.max(3,54,32,16);
+//var min = Math.min(3,54,32,16);
+//alert(max);
+//alert(min);
+
+//var values = [1,2,3,4,5,6,7,8];
+//var max = Math.max.apply(Math,values);
+//alert(max);
+
+//    alert(Math.ceil(25.9));
+//    alert(Math.floor(25.9));
+//    alert(Math.round(25.9));
+
+//    var num = Math.floor(Math.random()*10 + 1);
+//    alert(num);
+
+    function selectFrom(lowerValue, upperValue){
+        var choices = upperValue - lowerValue + 1;
+        return Math.floor(Math.random() * choices + lowerValue);
+    }
+    var num = selectFrom(2,10);
+    alert(num);
+
+    var colors = ["red","green","blue","yellow","black","purple","brown"];
+    var color = colors[selectFrom(0, colors.length-1)];
+    alert(color);
+
+
+
 
 
 
