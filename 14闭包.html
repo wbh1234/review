@@ -15,27 +15,138 @@ li绑定事件时，在for循环里添加函数立即调用，为这个函数立
 形参index
 
 -->
-<ul>
-    <li>111</li>
-    <li>222</li>
-    <li>333</li>
-    <script>
-        var aLi = document.getElementsByTagName('li');
-//        for(var i=0;i<aLi.length;i++){
-//            aLi[i].index = i;
-//            aLi[i].onclick = function(){
-//                console.log(this.index);
+
+    <!--</script><ul>-->
+    <!--<li>111</li>-->
+    <!--<li>222</li>-->
+    <!--<li>333</li>-->
+<!--</ul>-->
+<!--<script>-->
+    <!--var aLi = document.getElementsByTagName('li');-->
+    <!--//        for(var i=0;i<aLi.length;i++){-->
+    <!--//            aLi[i].index = i;-->
+    <!--//            aLi[i].onclick = function(){-->
+    <!--//                console.log(this.index);-->
+    <!--//            }-->
+    <!--//        }-->
+    <!--for(var i=0;i<aLi.length;i++){-->
+        <!--(function(idx){-->
+            <!--aLi[i].onclick = function(){-->
+                <!--console.log(idx);-->
+            <!--}-->
+        <!--})(i);-->
+    <!--}-->
+<script>
+//    function createComparisonFunction(propertyName){
+//
+//        return function(object1,object2){
+//            var value1 = object1[propertyName];
+//            var value2 = object2[propertyName];
+//
+//            if(value1 < value2){
+//                return -1;
+//            }else if(value1 > value2){
+//                return 1;
+//            }else{
+//                return 0;
 //            }
 //        }
-        for(var i=0;i<aLi.length;i++){
-            (function(idx){
-                aLi[i].onclick = function(){
-                    console.log(idx);
-                }
-            })(i);
+//    }
+//
+//    var compare = createComparisonFunction("name");
+//    var result = compare({name:"Nicholas"},{name:"Greg"});
+//    alert(result);
+
+
+//    function compare(value1,value2) {
+//        if(value1 > value2){
+//            return 1;
+//        }else if(value1 < value2){
+//            return -1;
+//        }else{
+//            return 0;
+//        }
+//    }
+//
+//    var result = compare(5,10);
+//    alert(result);
+
+
+
+
+
+
+//    function createFunctions(){
+//        var  result = new Array();
+//        for(var i = 0; i <10;i++){
+//            result[i] = function(){
+//                return i;
+//            };
+//        }
+//        return result;
+//    }
+//function createFunctions(){
+//    var result = new Array();
+//    for(var i=0;i<10;i++){
+//        result[i]= function(num){
+//            return function(){
+//                return num;
+//            };
+//        }(i);
+//    }
+//    return result;
+//}
+//    var name = "The Window";
+//    var object = {
+//        name:"My Object",
+//        getNameFunc:function(){
+//            return  function(){
+//                return this.name;
+//            };
+//        }
+//    };
+//    alert(object.getNameFunc()());
+//var name = "The Window";
+//
+//var object = {
+//    name:"My Object",
+//    getNameFunc:function(){
+//        var that = this;
+//        return function(){
+//            return that.name;
+//        };
+//    }
+//};
+//alert(object.getNameFunc()());
+//
+
+    function assignHandler(){
+        var element = document.getElementById("someElement");
+        element.onclick = function(){
+            alert(element.id);
         }
-    </script>
-</ul>
+    }
+    function assignHandler1(){
+        var element = document.getElementById("someElement");
+        var id = element.id;
+
+        element.onclick = function(){
+            alert(id);
+        };
+        element = null;
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+
 
 
 
