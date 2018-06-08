@@ -7,43 +7,43 @@
 <body>
 <!--定义一个对象-->
 <script>
-    var obj = {//对象直接量
-        name:'list',
-        age:19
-    };
-    var obj1 = new Object();//实例化
-    obj1.name = "zhangsan";
-
-    //类：具有相同属性和方法的对象的集合
-//    var fn = function(){
-//        console.log('my name is ' + this.name);
+//    var obj = {//对象直接量
+//        name:'list',
+//        age:19
+//    };
+//    var obj1 = new Object();//实例化
+//    obj1.name = "zhangsan";
+//
+//    //类：具有相同属性和方法的对象的集合
+////    var fn = function(){
+////        console.log('my name is ' + this.name);
+////    }
+//
+//    function Person(name) {
+////        this.name = name;
+////        this.sayHello = fn;
+////        this.sayHello = function () {
+////            console.log('my name is' + this.name);
+////        }
 //    }
-
-    function Person(name) {
-//        this.name = name;
-//        this.sayHello = fn;
-//        this.sayHello = function () {
-//            console.log('my name is' + this.name);
-//        }
-    }
-    Person.prototype.name ='lisi';
-    Person.prototype.father = {
-        name:'zbuff'
-    }
-    Person.prototype.sayHello = function(){
-        console.log('my name is '+ this.name);
-    }
-
-    var person1 = new Person('zhangsan');
-    var person2 = new Person('lisi');
-
-
-    person1.father.name = 'kkkkk';
-    person1.name = 'jjjj';
-    console.log(person1.name);//person1.name属于栈内存，各自有自己的属性不共用
-    console.log(person2.name);
-    console.log(person1.father.name);
-    console.log(person2.father.name);
+//    Person.prototype.name ='lisi';
+//    Person.prototype.father = {
+//        name:'zbuff'
+//    }
+//    Person.prototype.sayHello = function(){
+//        console.log('my name is '+ this.name);
+//    }
+//
+//    var person1 = new Person('zhangsan');
+//    var person2 = new Person('lisi');
+//
+//
+//    person1.father.name = 'kkkkk';
+//    person1.name = 'jjjj';
+//    console.log(person1.name);//person1.name属于栈内存，各自有自己的属性不共用
+//    console.log(person2.name);
+//    console.log(person1.father.name);
+//    console.log(person2.father.name);
 //属性要写在构造函数中，方法要写在prototype中
 //
 //    person1.sayHello();
@@ -55,32 +55,46 @@
 
 
 //    继承
-    function A(){
-        this.name = 'zhangsan';
-        this.hobby = ['dance','sing'];
-    }
-    A.prototype.say = function(){
-        console.log('hello');
-    };
-    function B(){
-        A.call(this);//this输出B,this指向obj
-//        A.call继承属性
-    }
-    B.prototype = new A();//B.prototype.name='zhangsan'
-//    prototype继承方法
-
-    var oB1 = new B();
-    var oB2 = new B();
-    B.prototype.constructor = B;
-    console.log(oB1.constructor);
-//    constructor是构造函数，是prototype下的属性
+//    function A(){
+//        this.name = 'zhangsan';
+//        this.hobby = ['dance','sing'];
+//    }
+//    A.prototype.say = function(){
+//        console.log('hello');
+//    };
+//    function B(){
+//        A.call(this);//this输出B,this指向obj
+////        A.call继承属性
+//    }
+//    B.prototype = new A();//B.prototype.name='zhangsan'
+////    prototype继承方法
+//
+//    var oB1 = new B();
+//    var oB2 = new B();
+//    B.prototype.constructor = B;
+//    console.log(oB1.constructor);
+////    constructor是构造函数，是prototype下的属性
 
 //    oB1.hobby.push('shopping');
 //
 //    console.log(oB2.hobby);
 
 
-
+function SuperType(){
+    this.property = true;
+}
+SuperType.prototype.getSuperValue = function(){
+    return this.property;
+};
+function SubType(){
+    this.subproperty = false;
+}
+SubType.prototype = new SuperType();
+SubType.prototype.getSubValue = function(){
+    return this.subproperty;
+};
+var instance = new SubType();
+alert(instance.getSuperValue());
 
 
 
