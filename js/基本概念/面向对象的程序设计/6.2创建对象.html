@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+ //工厂模式
+//    function createPerson(name, age, job){
+//        var o = new Object();
+//        o.name = name;
+//        o.age = age;
+//        o.job = job;
+//        o.sayName = function(){
+//            alert(this.name);
+//        };
+//        return o;
+//    }
+//
+//    var person1 = createPerson("Nicholas", 29, "Software Engineer");
+//    var person2 = createPerson("Greg", 27, "Doctor");
+//    alert(person1);
+//    alert(person2);
+//构造函数模式：构造函数本身也是函数，只不过可以用来创建对象而已
+//    function Person(name,age,job){
+//        this.name = name;
+//        this.age = age;
+//        this.job = job;
+//        this.sayName = function(){
+//            alert(this.name);
+//        };
+//    }
+//    var person1 = new Person("Nicholas", 29, "Software Engineer");
+//    var person2 = new Person("Greg", 27, "Doctor");
+//    alert(person1);
+//    alert(person2);
+
+//要创建person的新实例，必须使用new操作符
+//    1：创建一个新对象
+//    2：将构造函数的作用域赋给了this对象
+//    3：执行构造函数中的代码(为这个新对象添加属性)
+//    4：返回新对象
+//用来标识对象类型
+//alert(person1.constructor == Person);
+//alert(person2.constructor == Person);
+
+    //检测对象类型instanceof
+//    alert(person1 instanceof Object);
+//    alert(person1 instanceof Person);
+//    alert(person2 instanceof Object);
+//    alert(peraon2 instanceof Person);
+
+    //将构造函数当作函数
+
+//    var person = new Person("Nicholas", 29, "Software Engineer");
+//    person.sayName();
+//
+//    var person("Greg", 27, "Doctor");
+//    window.sayName();
+//
+//    var o = new Object();
+//    Person.call(o, "Kristen", 25, "Nurse");
+//    o.sayName();
+
+//构造函数的问题(每个方法都要在每个实力上重新创建一遍)
+//    function Person(name, age, job){
+//        this.name = name;
+//        this.age = age;
+//        this.job = job;
+//        this.sayName = new Function("alert(this.name)");
+//    }
+//    function Person(name, age, job){
+//        this.name = name;
+//        this.age = age;
+//        this.job = job;
+//        this.sayName = sayName;
+//    }
+//function sayName(){
+//        alert(this.name);
+//}
+//var person1 = new Person("Nicholas", 29, "Software Engineer");
+//var person2 = new Person("Greg", 27,"Doctor");
+//alert(person1.sayName == person2.sayName);
+
+    //原型(prototype)模式(可以让所有对象实例共享他所包含的属性和方法)
+function Person(){
+
+}
+Person.prototype.name = "Nicholas";
+Person.prototype.age = 29;
+Person.prototype.job = "Software Engineer";
+Person.prototype.sayName = function(){
+    alert(this.name);
+};
+
+var person1 = new Person();
+person1.sayName();
+
+var person2 = new Person();
+person2.sayName();
+alert(person1.sayName == person2.sayName);
+
+//理解原型对象 constructor->prototype
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
