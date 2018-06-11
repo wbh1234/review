@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //继承:接口继承和实现继承：接口继承只继承方法签名，实现继承则继承实际的方法
+    //原型链：利用原型让一个引用类型继承另一个引用类型的属性和方法
+    //每个构造函数都有一个原型对象，原型对象都包含一个指向构造函数的指针，而实例都包含一个指向原型对象的指针
+
+        function SuperType() {
+            this.property = true;
+        }
+        SuperType.prototype.getSuperValue = function(){
+            return this.property;
+        };
+        function SubType(){
+            this.subproperty = false;
+        }
+
+
+        //继承了SuperType
+        SubType.prototype = new SuperType();
+
+        SuperType.prototype.getSuperValue = function(){
+            return this.subproperty;
+        };
+
+        var instance = new SubType();
+        alert(instance.getSuperValue());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
