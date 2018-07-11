@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body>
+<div id="top">
+    <div id="topLeft">
+        <span id="first">LINE Dict</span></br>
+        <span id="second">CHINESE-ENGLISH</span>
+    </div>
+    <div id="TopSelect">
+        <form action="" id="register" method="post">
+            <input type="radio" name="word" checked="true">单词
+            <input type="radio" name="word">例句
+        </form>
+    </div>
+    <div id="TopFind">
+
+        <div class="search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+
+        </div>
+        <div class="search">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+
+        </div>
+        <input type="text" class="user">
+    </div>
+    <div id="TopLast">
+        <button>
+            登陆
+        </button>
+
+    </div>
+
+
+
+
+</div>
+<div id="container">
+    <div id="left">
+        <div id="leftSelect">
+            <span id="one">词典</span>
+            <span id="two">翻译器</span>
+            <span id="three">今日会话</span>
+        </div>
+        <div id="leftSetting">
+            设定
+            <div id="leftSettingArrow">
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </div>
+            <ul id="settingList">
+                <li>setting1</li>
+                <li>setting2</li>
+                <li>setting3</li>
+            </ul>
+        </div>
+        <div id="leftLine">
+            LINE词典官方账号
+            <div id="leftLineArrow">
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </div>
+            <ul id="leftLineList">
+                <li>setting1</li>
+                <li>setting2</li>
+                <li>setting3</li>
+            </ul>
+        </div>
+        <div id="leftInform">
+            <div id="leftInformOne">
+                通知
+            </div>
+            LINE汉英词典(PC版本)已更新
+        </div>
+        <div id="leftTransform">
+            <div id="leftTransformOne">
+                LINE词典
+
+            </div>
+            英语  <i class="fa fa-long-arrow-right" aria-hidden="true"></i>汉语</br>
+            汉语 <i class="fa fa-arrows-h" aria-hidden="true"></i> 泰语
+        </div>
+
+    </div>
+    <div id="arrow">
+        <i class="fa fa-caret-left" aria-hidden="true" id="selected"></i>
+        <i class="fa fa-caret-right" aria-hidden="true" id="selected2"></i>
+    </div>
+    <div id="right">
+        <div id="rightContent">
+            <div id="rightContentFirst">
+                    <div id="rightContentFirstImg">
+                    </div>
+                    <div id="rightContentFirstWord">
+                        <span id="rightContentFirstWordOne">今日会话</span>
+                        <div id="rightContentFirstWordTree">你有什么需要的？
+                            <span>
+                                <i class="fa fa-volume-up" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <span id="rightContentFirstWordTwo">Is there anything you want?</span>
+                        <div id="rightContentFirstWordFour">
+                            查看更多>
+                        </div>
+                    </div>
+
+            </div>
+            <div id="rightContentSecond">
+                <span id="rightContentSecondWordOne">今日名言</span>
+                <div id="rightContentSecondWordTwo">
+                    读书破万卷，下笔如有神。
+                    <span id="rightContentSecondWordThree"></span>
+                    <span id="rightContentSecondWordFour">
+                        <i class="fa fa-volume-up" aria-hidden="true"></i>
+                          - 杜甫</span>
+                </div>
+                <span id="rightContentSecondWordFive"> dú shū pò wàn juàn，xià bǐ rú yǒu shén.</span><br>
+                <span id="rightContentSecondWordSix">Having pored over ten thousand volumes,one can write with godly power</span>
+                <div id="rightContentSecondWordSeven">查看更多 ></div>
+            </div>
+            <div id="rightContentThree">
+                <div id="rightContentThreeWordLeft">
+                    <span id="rightContentThreeWordLeftOne">数据提供</span>
+                    <span id="rightContentThreeWordLeftTwo">Collins</span>
+                </div>
+                <div id="rightContentThreeWordRight">
+                    <span id="rightContentThreeWordLeftThree">
+                        分享LINE词典
+
+                    </span>
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div id="rightAd">
+            <div id="rightAdImg">
+
+            </div>
+            <div id="rightWord">
+                <span>单词卡</span><br>
+                <span>目前没有单词</span>
+            </div>
+            <div id="rightAdImgTwo">
+
+
+                <div id="rightWordTwo">
+                    <a href="#">
+                        免费下载 离线词典
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul id="list">
+        <li>帮助</li>
+        <li>隐私条款</li>
+        <li>使用条款</li>
+        <li>通知</li>
+        <li>NAVER Corp</li>
+    </ul>
+</div>
+<script src="js/index.js"></script>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#arrow").click(function(){
+            $("#left").animate({
+                weight:'toggle'
+            },"slow");
+
+
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+*{
+    margin:0;
+    padding:0;
+    font-size:100%;
+}
+html{
+    background: lightgray;
+
+}
+#top{
+    width:100%;
+    height:80px;
+    background: #00c301;
+}
+#topLeft{
+    float: left;
+    margin-left: 25px;
+    color: white;
+}
+#topLeft #first{
+    display: inline-block;
+    padding-top: 8px;
+    font-size:18px;
+}
+#topLeft #second {
+    display: inline-block;
+    font-size:23px;
+}
+#TopSelect{
+    display: inline-block;
+    float: left;
+    color: white;
+    font-size:18px;
+    margin-top:22px;
+    margin-left:100px;
+}
+#TopFind{
+    display: inline-block;
+    width:37%;
+    height:40px;
+    background: white;
+    margin-top:20px;
+    margin-left: 50px;
+    overflow: hidden;
+}
+#TopFind input{
+    border:none;
+    width: 100%;
+    margin-right:80px;
+    height:100%;
+    float: right;
+}
+#TopFind .search{
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-left:solid 0.5px lightgray;
+    float: right;
+    text-align: center;
+    line-height: 40px;
+    color:#00c301;
+}
+#TopLast{
+    float: right;
+    color: white;
+    margin-top:20px;
+    margin-right:15%;
+    font-size:11px;
+}
+#TopLast button{
+    width: 60px;
+    height:40px;
+    background: #00c301;
+    font-size:16px;
+    color: white;
+    border: 1px solid #17c918;  //自定义边框
+    margin-right: -1px;  //用来消除左右重叠边框
+    margin-bottom: -1px;  //用来消除上下重叠边框
+    return false;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+#TopLast button:after{
+    content: "";
+    display: block;
+    clear: both;
+    border: 1px solid #17c918;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    outline: none;    //消除默认点击蓝色边框效果
+}
+#container{
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    /*background: yellow;*/
+    position:absolute;
+    top:80px;
+    bottom:0;
+    overflow: hidden;
+}
+#container #left{
+    width:250px;
+    height: 100%;
+    float: left;
+    background: #fefefe;
+    /*position: relative;*/
+    border-right:solid 1px lightgray;
+}
+#container #right{
+    height: 550px;
+    float: right;
+    flex-grow: 1;
+    background: white;
+    margin-top:15px;
+    margin-right:200px;
+}
+#leftSelect{
+    padding-bottom: 20px;
+    border-bottom: solid 1px lightgray;
+}
+#leftSelect #one,#leftSelect #two,#leftSelect #three{
+    cursor: pointer;
+}
+#leftSelect span{
+    display: block;
+    margin-top:20px;
+    padding-left:25px;
+    font-size:14px;
+}
+#leftSetting{
+    font-size: 12px;
+    margin-top:20px;
+    padding-left:25px;
+    padding-bottom:20px;
+    border-bottom:solid 1px lightgray;
+    color: #b3b8bf;
+    position: relative;
+
+}
+#leftSetting #settingList{
+    display: none;
+    cursor: pointer;
+}
+#leftSetting #leftSettingArrow{
+    position: absolute;
+    top:0px;
+    right:5px;
+    cursor: pointer;
+}
+
+#leftLine{
+    font-size: 12px;
+    margin-top:20px;
+    padding-left:25px;
+    padding-bottom:20px;
+    border-bottom:solid 1px lightgray;
+    color: #b3b8bf;
+    position: relative;
+}
+#leftLine #leftLineList{
+    display: none;
+    cursor: pointer;
+}
+#leftLine #leftLineArrow{
+    position: absolute;
+    top:0px;
+    right:5px;
+    cursor: pointer;
+}
+
+#leftInform #leftInformOne{
+    font-size: 12px;
+    margin-top:20px;
+    /*padding-left:25px;*/
+    padding-bottom:7px;
+    color: #b3b8bf;
+
+
+}
+#leftInform{
+    font-size: 14px;
+    padding-left:25px;
+    padding-bottom:20px;
+    border-bottom:solid 1px lightgray;
+}
+#leftTransform{
+    position: absolute;
+    bottom: 0;
+    width:225px;
+    background: white;
+    font-size: 14px;
+    padding-left:25px;
+    padding-bottom:20px;
+    border-top:solid 1px lightgray;
+}
+#leftTransform #leftTransformOne{
+    font-size: 12px;
+    margin-top:20px;
+    padding-bottom:7px;
+    color: #b3b8bf;
+
+}
+#arrow{
+    width:15px;
+    height:30px;
+    margin-top:5px;
+    margin-right:5px;
+    background:white;
+    border:solid 1px lightgray;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+#arrow #selected1{
+    display: block;
+}
+#arrow #selected2{
+    display: none;
+}
+#right  {
+    position: relative;
+}
+#right #rightContent{
+    height:100%;
+    margin-right:300px;
+    border-top:solid 1px lightgray;
+    border-left:solid 1px lightgray;
+    border-top:solid 1px lightgray;
+    position: relative;
+
+
+}
+#rightContentFirst{
+    width: 95%;
+    height: 120px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-right: 20px;
+    margin-left:20px;
+    background: white;
+    border-bottom: solid 1px lightgray;
+}
+#rightContent #rightContentFirstImg{
+    width: 120px;
+    height: 120px;
+    /*margin-left:20px;*/
+    background: url("../img/12.jpg") no-repeat;
+    background-size:cover;
+    float: left;
+    
+}
+#rightContent #rightContentFirstWord{
+    float: left;
+    margin-left:30px;
+}
+#rightContentFirstWord #rightContentFirstWordOne{
+    display: inline-block;
+    margin-bottom: 2px;
+    color: #00c301;
+    font-size: 12px;
+}
+#rightContentFirstWord #rightContentFirstWordTwo{
+    display: inline-block;
+    margin-bottom: 2px;
+    color: lightgray;
+    font-size: 13px;
+}
+#rightContentFirstWord #rightContentFirstWordTree{
+    margin-bottom: 2px;
+    font-size: 22px;
+}
+#rightContentFirstWordTree span{
+    color: lightgray;
+    font-size: 16px;
+}
+#rightContentFirstWord #rightContentFirstWordFour {
+    width:60px;
+    height:15px;
+    margin-top:5px;
+    text-align: center;
+    line-height: 15px;
+    font-size:10px;
+    color: #00c301;
+    border:solid 1px lightgray;
+}
+#rightContentSecond{
+    width: 95%;
+    height: 120px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-right: 10px;
+    margin-left:20px;
+    background: white;
+    border-bottom: solid 1px lightgray;
+}
+#rightContentSecond #rightContentSecondWordOne{
+    display: inline-block;
+    margin-bottom: 2px;
+    color: #acddfb;
+    font-size: 12px;
+}
+#rightContentSecond #rightContentSecondWordTwo{
+    margin-bottom: 2px;
+    font-size: 22px;
+}
+#rightContentSecond #rightContentSecondWordFour{
+    color: lightgray;
+    font-size:16px;
+}
+#rightContentSecond #rightContentSecondWordFive{
+    font-size: 13px;
+}
+#rightContentSecond #rightContentSecondWordSix{
+    font-size: 13px;
+    color: lightgray;
+    display: block;
+    margin-top:5px;
+}
+#rightContentSecond #rightContentSecondWordSeven{
+    width:60px;
+    height:15px;
+    margin-top:5px;
+    text-align: center;
+    line-height: 15px;
+    font-size:10px;
+    color: lightgray;
+    border:solid 1px lightgray;
+}
+#rightContentThree{
+
+    /*height: 137px;*/
+    padding:20px 30px;
+    margin-right: 10px;
+    margin-left:20px;
+    background: white;
+    /*border-bottom: solid 1px lightgray;*/
+}
+#rightContentThree #rightContentThreeWordLeft{
+    position: absolute;
+    bottom:25px;
+    left:20px;
+}
+#rightContentThreeWordLeft #rightContentThreeWordLeftOne{
+    font-size: 10px;
+    color: lightgray;
+    margin-right:3px;
+}
+#rightContentThreeWordLeft #rightContentThreeWordLeftTwo{
+    font-size: 14px;
+    margin-right:3px;
+}
+#rightContentThreeWordRight{
+    position: absolute;
+    bottom:25px;
+    right:20px;
+}
+#rightContentThreeWordRight #rightContentThreeWordLeftThree{
+    font-size: 10px;
+    color: lightgray;
+    margin-right:3px;
+}
+#right #rightAd{
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    right:0;
+    top: 0;
+    background: #fafafa;
+    border:solid 1px lightgray;
+}
+#rightAd #rightAdImg{
+    width: 280px;
+    height: 180px;
+    margin:10px 15px;
+    background:url("../img/13.jpg") no-repeat;
+    background-size: contain;
+}
+#rightAd #rightWord{
+    padding-left:10px;
+    padding-bottom: 50px;
+    border-bottom: solid 1px lightgray;
+}
+#rightAd #rightWord span {
+    font-size:12px;
+}
+#rightAd #rightAdImgTwo{
+    width: 280px;
+    height: 180px;
+    margin:10px 15px;
+    background:url("../img/13.jpg") no-repeat;
+    background-size: contain;
+    position: relative;
+}
+#rightAd #rightWordTwo{
+    font-size: 14px;
+    position: absolute;
+    right:30px;
+    bottom:40px;
+    cursor: pointer;
+
+}
+#rightWordTwo a{
+    text-decoration: none;
+    color:gray;
+}
+#container #list{
+    list-style: none;
+    position: absolute;
+    bottom: 38px;
+    right: 500px;
+}
+#list li{
+    display: inline-block;
+    padding-right:10px;
+    padding-left:10px;
+    font-size: 10px;
+    color: black;
+    float: left;
+}
+#list li:nth-child(n) {
+    border-right:solid 1px gray;
+}
+#list li:nth-last-child(1){
+    border-right:none;
+}
+
+
+
+
+
+
+
