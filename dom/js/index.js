@@ -18,7 +18,7 @@ oOne.onmouseover = function(){
 };
 oOne.onmouseout = function(){
     oOne.style.color="black";
-    oOne.style.borderLeft="none";
+    oOne.style.borderLeft="solid 2px white";
 
 };
 oTwo.onmouseover = function(){
@@ -27,7 +27,7 @@ oTwo.onmouseover = function(){
 };
 oTwo.onmouseout = function(){
     oTwo.style.color="black";
-    oTwo.style.borderLeft="none";
+    oTwo.style.borderLeft="solid 2px white";
 
 };
 oThree.onmouseover = function(){
@@ -36,7 +36,7 @@ oThree.onmouseover = function(){
 };
 oThree.onmouseout = function(){
     oThree.style.color="black";
-    oThree.style.borderLeft="none";
+    oThree.style.borderLeft="solid 2px white";
 
 };
 

@@ -3,14 +3,19 @@
     padding:0;
     font-size:100%;
 }
+body{
+    min-width:1300px;
+}
 html{
     background: lightgray;
+    min-width:1300px;
 
 }
 #top{
     width:100%;
     height:80px;
     background: #00c301;
+    overflow: hidden;
 }
 #topLeft{
     float: left;
@@ -27,7 +32,6 @@ html{
     font-size:23px;
 }
 #TopSelect{
-    display: inline-block;
     float: left;
     color: white;
     font-size:18px;
@@ -36,19 +40,19 @@ html{
 }
 #TopFind{
     display: inline-block;
-    width:37%;
+    width:480px;
     height:40px;
-    background: white;
+    background: red;
     margin-top:20px;
     margin-left: 50px;
     overflow: hidden;
+    position: relative;
 }
 #TopFind input{
+    width:399px;
     border:none;
-    width: 100%;
-    margin-right:80px;
     height:100%;
-    float: right;
+
 }
 #TopFind .search{
     width: 40px;
@@ -64,7 +68,7 @@ html{
     float: right;
     color: white;
     margin-top:20px;
-    margin-right:15%;
+    margin-right:100px;
     font-size:11px;
 }
 #TopLast button{
@@ -93,9 +97,9 @@ html{
 }
 #container{
     width: 100%;
+    min-width: 1300px;
     margin-bottom: 0;
     display: flex;
-    /*background: yellow;*/
     position:absolute;
     top:80px;
     bottom:0;
@@ -104,9 +108,8 @@ html{
 #container #left{
     width:250px;
     height: 100%;
-    float: left;
     background: #fefefe;
-    /*position: relative;*/
+    position: relative;
     border-right:solid 1px lightgray;
 }
 #container #right{
@@ -129,6 +132,7 @@ html{
     margin-top:20px;
     padding-left:25px;
     font-size:14px;
+    border-left: solid 2px white;
 }
 #leftSetting{
     font-size: 12px;
@@ -258,33 +262,46 @@ html{
 }
 #rightContentFirstWord #rightContentFirstWordOne{
     display: inline-block;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     color: #00c301;
-    font-size: 12px;
+    font-size: 16px;
 }
 #rightContentFirstWord #rightContentFirstWordTwo{
     display: inline-block;
     margin-bottom: 2px;
+    width: 300px;
+    height: 23px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-break:keep-all;
     color: lightgray;
-    font-size: 13px;
+    font-size: 14px;
 }
 #rightContentFirstWord #rightContentFirstWordTree{
     margin-bottom: 2px;
-    font-size: 22px;
+    font-size: 25px;
+    width: 230px;
+    height: 30px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-break:keep-all;
 }
 #rightContentFirstWordTree span{
     color: lightgray;
     font-size: 16px;
 }
 #rightContentFirstWord #rightContentFirstWordFour {
-    width:60px;
-    height:15px;
+    width:80px;
+    height:20px;
     margin-top:5px;
     text-align: center;
-    line-height: 15px;
-    font-size:10px;
+    line-height: 20px;
+    font-size:14px;
     color: #00c301;
     border:solid 1px lightgray;
+    cursor: pointer;
 }
 #rightContentSecond{
     width: 95%;
@@ -298,34 +315,65 @@ html{
 }
 #rightContentSecond #rightContentSecondWordOne{
     display: inline-block;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     color: #acddfb;
-    font-size: 12px;
+    font-size: 16px;
 }
 #rightContentSecond #rightContentSecondWordTwo{
     margin-bottom: 2px;
-    font-size: 22px;
+    font-size: 25px;
+    width: 300px;
+    height: 30px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-break:keep-all;
+}
+#rightContentSecond #rightContentSecondWordThree{
+    width: 360px;
+    height:30px;
+    overflow: hidden;
+    position: relative;
 }
 #rightContentSecond #rightContentSecondWordFour{
     color: lightgray;
     font-size:16px;
+    position: absolute;
+    top: 7px;
+    right: 0;
+
+
 }
 #rightContentSecond #rightContentSecondWordFive{
+    display: inline-block;
+    width: 300px;
+    height: 16px;
     font-size: 13px;
+    margin-top:2px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-break:keep-all;
 }
 #rightContentSecond #rightContentSecondWordSix{
     font-size: 13px;
     color: lightgray;
-    display: block;
-    margin-top:5px;
+    display: inline-block;
+    margin-top:0px;
+    width: 480px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-break:keep-all;
+
 }
 #rightContentSecond #rightContentSecondWordSeven{
-    width:60px;
-    height:15px;
+    width:80px;
+    height:20px;
     margin-top:5px;
     text-align: center;
-    line-height: 15px;
-    font-size:10px;
+    line-height: 20px;
+    font-size:14px;
     color: lightgray;
     border:solid 1px lightgray;
 }
@@ -426,7 +474,6 @@ html{
 #list li:nth-last-child(1){
     border-right:none;
 }
-
 
 
 
